@@ -1,4 +1,4 @@
-class Paperscope < Formula
+class Paper < Formula
   desc "Paper: local-first document search with exact page and line citations. CLI + MCP server in one binary."
   homepage "https://github.com/arrowassassin/paperscope"
   version "0.2.4"

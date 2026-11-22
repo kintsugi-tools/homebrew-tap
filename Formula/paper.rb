@@ -1,25 +1,25 @@
 class Paper < Formula
   desc "Local-first AI document search with exact page and line citations. One binary: CLI + MCP server for LLMs. PDF, DOCX and 15+ formats, no cloud, no telemetry."
   homepage "https://kintsugi.tools/paperscope.html"
-  version "0.2.10"
+  version "0.2.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.10/paperscope-aarch64-apple-darwin.tar.xz"
-      sha256 "ee437ed7af0537a19effde6844185a54c68881849dbdf57a2e77a5fe98f616ea"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.2.11/paperscope-aarch64-apple-darwin.tar.xz"
+      sha256 "624302006a5a7eb85d3338ca9f23c4d97eeed3785b76b4360247a661b7058a4e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.10/paperscope-x86_64-apple-darwin.tar.xz"
-      sha256 "ec2ab40f3b5ed80bc88a024e2d5503b815e0374b877bb1178c360f0254ff4406"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.2.11/paperscope-x86_64-apple-darwin.tar.xz"
+      sha256 "1e6962f20542c701ba38c4e2a6942927708ae6aced961d0be032151193c2c711"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.10/paperscope-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "133d6db6eb4d37baa9667c03edc806c0c2fb02a5c47927a69005c1e6f92309d2"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.2.11/paperscope-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "423920bcb0b2272bdefb9e047dfbdaa786fe057c9ed8d2e7797a8cfcd74c5487"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.10/paperscope-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "00683a286812008e42429b13643a74eb2ddf65ac1709b2f5d0c8e43df148166d"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.2.11/paperscope-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "786b5a3d19177c52e105f8274d36c5d820dcad5c9e44e8d0650d3845838aabc7"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]

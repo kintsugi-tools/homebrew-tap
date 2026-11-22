@@ -1,25 +1,25 @@
 class Paper < Formula
-  desc "Paper: local-first document search with exact page and line citations. CLI + MCP server in one binary."
-  homepage "https://github.com/arrowassassin/paperscope"
-  version "0.2.4"
+  desc "Local-first AI document search with exact page and line citations. One binary: CLI + MCP server for LLMs. PDF, DOCX and 15+ formats, no cloud, no telemetry."
+  homepage "https://kintsugi.tools/paperscope.html"
+  version "0.2.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.4/paperscope-aarch64-apple-darwin.tar.xz"
-      sha256 "d90c4d2d82fdf68f17151c686123fac093a383418e597345016d41ff9ac0fda4"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-aarch64-apple-darwin.tar.xz"
+      sha256 "8955b3e3828d95241446bda4aada64ddfb4b16442af4532f61760c3e90db69db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.4/paperscope-x86_64-apple-darwin.tar.xz"
-      sha256 "9f46808eee27059109b480e153ba3f1824b9dde579507959d0577cf8d76d1183"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-x86_64-apple-darwin.tar.xz"
+      sha256 "9a00afd2af66ab1aa2a9184f610b6f51eee6beef52a95891c5f4cb72fa1f8311"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.4/paperscope-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0cfdab8d5462382220f8a9367b51f54382cc7b7f8e0785569f49ed7dffe72879"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5820766e97d1a708ba2bf790952ed1b903cb9a04cfe86feb768d2d7c1b0c6f33"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.4/paperscope-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6d51c6eb091c1bbc3fb67e0b8d0d72e8598d32595c4a66ecd1b622099e1ed49f"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bd85df68814930e3b8060ab38d3c22f40b08a081c4b85290e53b4f4c3702cc2d"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]

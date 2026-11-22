@@ -1,25 +1,25 @@
 class Paper < Formula
   desc "Local-first AI document search with exact page and line citations. One binary: CLI + MCP server for LLMs. PDF, DOCX and 15+ formats, no cloud, no telemetry."
   homepage "https://kintsugi.tools/paperscope.html"
-  version "0.2.8"
+  version "0.2.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-aarch64-apple-darwin.tar.xz"
-      sha256 "8955b3e3828d95241446bda4aada64ddfb4b16442af4532f61760c3e90db69db"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.9/paperscope-aarch64-apple-darwin.tar.xz"
+      sha256 "8ae79f20e5c1c7818c71dcaa60cc6459ee5e01cb9ed1fba5873077b23753033d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-x86_64-apple-darwin.tar.xz"
-      sha256 "9a00afd2af66ab1aa2a9184f610b6f51eee6beef52a95891c5f4cb72fa1f8311"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.9/paperscope-x86_64-apple-darwin.tar.xz"
+      sha256 "6476c08eefe6afa7f0a12a7f2d56d0912daa196f6367f7cc82021328c3271321"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5820766e97d1a708ba2bf790952ed1b903cb9a04cfe86feb768d2d7c1b0c6f33"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.9/paperscope-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b2c061fc74a16cb2f2aeeec4de0b3a55066bc743463ae9755c0dc91b8179b692"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.8/paperscope-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "bd85df68814930e3b8060ab38d3c22f40b08a081c4b85290e53b4f4c3702cc2d"
+      url "https://github.com/arrowassassin/paperscope/releases/download/v0.2.9/paperscope-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "17cf886baee9e88f639a733e412a89ece79a28e7d23c45e479cec7ea92d1ff28"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]

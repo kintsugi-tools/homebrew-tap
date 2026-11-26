@@ -1,38 +1,38 @@
 class Paper < Formula
   desc "Local-first AI document search with exact page and line citations. One binary: CLI + MCP server for LLMs. PDF, DOCX and 15+ formats, no cloud, no telemetry."
   homepage "https://kintsugi.tools/paperscope.html"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.1/paperscope-aarch64-apple-darwin.tar.xz"
-      sha256 "9163afa9f484e98190c518b9f42f2fd3b10ef0c7ef66ff1fff340bec1753bb51"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.2/paperscope-aarch64-apple-darwin.tar.xz"
+      sha256 "c04d8d659cedfff2a3585d439eacc44122884cffd5a07ab43573e13cd0af9b43"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.1/paperscope-x86_64-apple-darwin.tar.xz"
-      sha256 "503f1f54f4ee8393181a50fc57784a848f88f6858bde2c997fcfaf95602e4027"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.2/paperscope-x86_64-apple-darwin.tar.xz"
+      sha256 "bad509314afe89dbc293cc3d5cb66fbbef14b39aadfeff0276f060b87e7d4ca8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.1/paperscope-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "eeed88360923f8dda6a00ebc6b74d638f35b6d6175a04fcf067aad421d3df8b6"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.2/paperscope-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e4278a20942c92cdf0955b4ccd867084c3593bc617a9a131d562bb4560345437"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.1/paperscope-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8888a4550240a6d466cabba8e89abd5a862dc0dbb111484e81bf5d5cc4bda604"
+      url "https://github.com/kintsugi-tools/paperscope/releases/download/v0.4.2/paperscope-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "eeb9841dc21a8bfd12d0fad7f2ce815f542871400a46aa94a5514363018c0b55"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {},
+    "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
+    "x86_64-apple-darwin":               {},
+    "x86_64-pc-windows-gnu":             {},
+    "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static": {}
-  }
+    "x86_64-unknown-linux-musl-static":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
